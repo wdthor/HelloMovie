@@ -1,9 +1,5 @@
-<script setup lang="ts">
-import TheWelcome from '../components/TheWelcome.vue'
-</script>
+<script setup lang="ts"></script>
 
 <template>
-  <main>
-    <TheWelcome />
-  </main>
+  <h1 class="ml-2 mt-2 text-3xl text-brand-blue-1 font-semibold">Hello Movie</h1>
 </template>
