@@ -22,7 +22,6 @@ export const usefilmStore = defineStore('filmStore', {
     async recupererFilmsPopulaires() {
       const { data } = await axios.get(FilmsPopulairesEndpoint(apiKey))
       this.listeFilm = mapperToFilmModel(data)
-      console.log(this.listeFilm)
     }
   }
 })
