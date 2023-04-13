@@ -23,3 +23,6 @@ THEMOVIEDB_API_KEY="123456"
 ```bash
 pnpm dev
 ```
+
+## Mention
+- Utilisation de l'api [TMDB](https://www.themoviedb.org/)

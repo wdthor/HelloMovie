@@ -1,4 +1,4 @@
-import type { FilmModel } from '@/models/FillmModel'
+import type { FilmModel } from '@/models/FilmModel'
 
 // Je fais un mapping pour correspondre à mon jeu de donnée (camelCase)
 export const mapperToFilmModel = (data: any): FilmModel[] => {

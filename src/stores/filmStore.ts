@@ -1,6 +1,6 @@
 import { apiKey } from '@/constants'
 import { FilmsPopulairesEndpoint } from '@/endpoints'
-import type { FilmModel } from '@/models/FillmModel'
+import type { FilmModel } from '@/models/FilmModel'
 import { mapperToFilmModel } from '@/utils/mappers'
 import axios from 'axios'
 import { defineStore } from 'pinia'
