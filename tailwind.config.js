@@ -8,7 +8,15 @@ module.exports = {
         'brand-blue-2': '#DEEEF5',
         'brand-orange-1': '#F18824',
         'brand-orange-2': '#FCDDC4'
-      }
+      },
+      container: {
+        padding: "2rem",
+        center: true,
+      },
+      screens: {
+        sm: "640px",
+        md: "768px",
+      },
     },
   },
   plugins: [],
