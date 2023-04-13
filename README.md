@@ -1,52 +1,25 @@
 # hello-movie
 
-This template should help get you started developing with Vue 3 in Vite.
+- Sur ce projet, j'utilise `pnpm`, mais je pense que ça devrait marcher avec `npm` aussi
 
-## Recommended IDE Setup
-
-[VSCode](https://code.visualstudio.com/) + [Volar](https://marketplace.visualstudio.com/items?itemName=Vue.volar) (and disable Vetur) + [TypeScript Vue Plugin (Volar)](https://marketplace.visualstudio.com/items?itemName=Vue.vscode-typescript-vue-plugin).
-
-## Type Support for `.vue` Imports in TS
-
-TypeScript cannot handle type information for `.vue` imports by default, so we replace the `tsc` CLI with `vue-tsc` for type checking. In editors, we need [TypeScript Vue Plugin (Volar)](https://marketplace.visualstudio.com/items?itemName=Vue.vscode-typescript-vue-plugin) to make the TypeScript language service aware of `.vue` types.
-
-If the standalone TypeScript plugin doesn't feel fast enough to you, Volar has also implemented a [Take Over Mode](https://github.com/johnsoncodehk/volar/discussions/471#discussioncomment-1361669) that is more performant. You can enable it by the following steps:
-
-1. Disable the built-in TypeScript Extension
-    1) Run `Extensions: Show Built-in Extensions` from VSCode's command palette
-    2) Find `TypeScript and JavaScript Language Features`, right click and select `Disable (Workspace)`
-2. Reload the VSCode window by running `Developer: Reload Window` from the command palette.
-
-## Customize configuration
-
-See [Vite Configuration Reference](https://vitejs.dev/config/).
-
-## Project Setup
-
-```sh
-pnpm install
+## Utiliser pnpm
+- Cette manip est à faire, seulement si vous voulez utiliser `pnpm`
+- Il faut avoir une version de `Node` au moins à `v16.13` minimum
+- Il faut activer `corepack` : 
+```bash
+corepack enable
 ```
 
-### Compile and Hot-Reload for Development
+## Installation du projet
+- Après avoir cloné le projet, faire `pnpm install` pour installer les dépendances
+- Il faut créer un fichier `.env` à la racine du projet
+- Dans ce fichier, créer une variable `THEMOVIEDB_API_KEY` avec la clé de l'api comme valeur  
 
-```sh
+Example :
+```js
+THEMOVIEDB_API_KEY="123456"
+```
+- Démarrer/Redémarrer l'appli
+```bash
 pnpm dev
-```
-
-### Type-Check, Compile and Minify for Production
-
-```sh
-pnpm build
-```
-
-### Run Unit Tests with [Vitest](https://vitest.dev/)
-
-```sh
-pnpm test:unit
-```
-
-### Lint with [ESLint](https://eslint.org/)
-
-```sh
-pnpm lint
 ```
