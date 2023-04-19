@@ -14,7 +14,12 @@ export const usefilmStore = defineStore('filmStore', {
       idFilm: '',
       titre: '',
       description: '',
-      image: ''
+      image: '',
+      dateSortie: '',
+      genre: '',
+      nombreVote: 0,
+      note: 0,
+      budgetFilm: 0
     },
     listeFilm: []
   }),

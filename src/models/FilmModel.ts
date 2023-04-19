@@ -3,4 +3,9 @@ export interface FilmModel {
   titre: string
   description: string
   image: string
+  dateSortie?: string
+  genre?: string
+  nombreVote?: number
+  note?: number
+  budgetFilm?: number
 }
