@@ -18,9 +18,11 @@ const props = defineProps({
 })
 
 const sommaireFilm = computed(() => {
+  // Je vérifie que la description existe bien avant de faire le découpage, sinon je renvoie une string vide
+  // Je définie la taille max de la description dans une constante (SOMMAIRE_TAILLE_MAX) plutôt que d'avoir un nombre aléatoire sans savoir à quoi celà correspond plus tard
   if (props.film?.description) {
     return `${props.film.description.slice(0, SOMMAIRE_TAILLE_MAX)}...`;
   }
-  return ''
+  return '';
 })
 </script>
