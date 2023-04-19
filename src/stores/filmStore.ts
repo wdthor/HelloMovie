@@ -1,9 +1,8 @@
-import { API_KEY } from '@/constants'
-import { FilmsPopulairesEndpoint } from '@/endpoints'
+import { mapperToFilmModel, mapperToListeFilmModel } from '@/utils/mappersUtil'
+import { FilmsPopulairesEndpoint, UnFilmEndpoint } from '@/endpoints'
 import type { FilmModel } from '@/models/FilmModel'
-import { mapperToFilmModel } from '@/utils/mappers'
-import axios from 'axios'
 import { defineStore } from 'pinia'
+import axios from 'axios'
 
 interface State {
   film: FilmModel
@@ -20,8 +19,12 @@ export const usefilmStore = defineStore('filmStore', {
   }),
   actions: {
     async recupererFilmsPopulaires() {
-      const { data } = await axios.get(FilmsPopulairesEndpoint(API_KEY))
-      this.listeFilm = mapperToFilmModel(data)
+      const { data } = await axios.get(FilmsPopulairesEndpoint)
+      this.listeFilm = mapperToListeFilmModel(data)
+    },
+    async recupererUnFilm(filmId: string) {
+      const { data } = await axios.get(UnFilmEndpoint(filmId))
+      this.film = mapperToFilmModel(data)
     }
   }
 })
