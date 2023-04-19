@@ -17,13 +17,23 @@ export const mapperToFilmModel = (data: any): FilmModel => {
     titre: data.title,
     description: data.overview,
     image: mapperToLienImage(data.poster_path),
-    dateSortie: data.release_date,
+    dateSortie: toDateFr(data.release_date),
     genre: data.genres[0].name,
     nombreVote: data.vote_count,
     note: data.vote_average,
-    budgetFilm: data.budget
+    budgetFilm: toEuro(data.budget)
   }
 }
 
 // Je rajoute le début du lien vers l'image
 const mapperToLienImage = (image: string): string => `${LienImage()}${image}`
+
+const toDateFr = (date: string): string => new Intl.DateTimeFormat('fr-FR').format(new Date(date))
+
+const toEuro = (nombre: number): string =>
+  new Intl.NumberFormat('fr-FR', {
+    style: 'currency',
+    currency: 'EUR',
+    minimumFractionDigits: 0,
+    maximumFractionDigits: 0
+  }).format(nombre)

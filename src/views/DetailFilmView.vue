@@ -11,8 +11,6 @@
       <p class="mt-2"><span class="font-semibold">Nombre de vote :</span> {{ film.nombreVote }}</p>
       <p class="mt-2"><span class="font-semibold">Note :</span> {{ film.note }}</p>
       <p class="mt-2"><span class="font-semibold">Budget :</span> {{ film.budgetFilm }}</p>
-
-
     </section>
 
   </div>

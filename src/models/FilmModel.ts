@@ -7,5 +7,5 @@ export interface FilmModel {
   genre?: string
   nombreVote?: number
   note?: number
-  budgetFilm?: number
+  budgetFilm?: string | number
 }
