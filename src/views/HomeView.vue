@@ -1,7 +1,7 @@
 <template>
   <div class="sm:container flex flex-col flex-grow mt-4">
     <div class="pt-4 mb-8 grid sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4 grid-cols-1 gap-12">
-      <TheFilm v-for="(film, index) in listeFilm" :key="index" :film="film" />
+      <TheFilm v-for="film in listeFilm" :key="film.idFilm" :film="film" />
     </div>
   </div>
 </template>
