@@ -4,6 +4,7 @@ import type { FilmModel } from '@/models/FilmModel'
 // Je fais un mapping pour correspondre à mon jeu de donnée (camelCase)
 export const mapperToListeFilmModel = (data: any): FilmModel[] => {
   return data.results.map((result: any) => ({
+    idFilm: result.id,
     titre: result.original_title,
     description: result.overview,
     image: mapperToLienImage(result.poster_path)
@@ -12,6 +13,7 @@ export const mapperToListeFilmModel = (data: any): FilmModel[] => {
 
 export const mapperToFilmModel = (data: any): FilmModel => {
   return {
+    idFilm: data.id,
     titre: data.original_title,
     description: data.overview,
     image: mapperToLienImage(data.poster_path)

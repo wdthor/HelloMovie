@@ -11,6 +11,7 @@ interface State {
 export const usefilmStore = defineStore('filmStore', {
   state: (): State => ({
     film: {
+      idFilm: '',
       titre: '',
       description: '',
       image: ''

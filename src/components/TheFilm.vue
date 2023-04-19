@@ -1,6 +1,8 @@
 <template>
   <div class="flex flex-col justify-start max-w-xs mx-auto p-2">
-    <img :src="film.image" :alt="props.film.titre" class="sm:w-full mx-auto hover:cursor-pointer">
+    <router-link :to="{ name: 'DetailFilm', params: { idFilm: props.film.idFilm } }">
+      <img :src="film.image" :alt="props.film.titre" class="sm:w-full mx-auto hover:cursor-pointer">
+    </router-link>
     <h2 class="text-center text-xl font-semibold">{{ props.film.titre }}</h2>
     <p class="text-justify  mt-2">{{ sommaireFilm }}</p>
   </div>
