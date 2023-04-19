@@ -1,4 +1,4 @@
-import { apiKey } from '@/constants'
+import { API_KEY } from '@/constants'
 import { FilmsPopulairesEndpoint } from '@/endpoints'
 import type { FilmModel } from '@/models/FilmModel'
 import { mapperToFilmModel } from '@/utils/mappers'
@@ -20,7 +20,7 @@ export const usefilmStore = defineStore('filmStore', {
   }),
   actions: {
     async recupererFilmsPopulaires() {
-      const { data } = await axios.get(FilmsPopulairesEndpoint(apiKey))
+      const { data } = await axios.get(FilmsPopulairesEndpoint(API_KEY))
       this.listeFilm = mapperToFilmModel(data)
     }
   }
